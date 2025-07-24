@@ -9,12 +9,13 @@ forms.addEventListener ('submit', function(e){
   const weight = parseInt(weightValue);
   const results = document.querySelector('#results');
 
+ 
   if(heightValue === '' || height <= 0 || isNaN(height)){
-    results.innerHTML = `please give a valid height`;
-  }
-  else if(weightValue === '' || weight <= 0 || isNaN(weight)){
-    results.innerHTML = `please give a valid weight`;
-  } 
+  results.innerHTML = `<span style="font-weight:bold; display:block; text-align:center; color:brown;">Please give a valid height</span>`;
+}
+else if(weightValue === '' || weight <= 0 || isNaN(weight)){
+  results.innerHTML = `<span style="font-weight:bold; display:block; text-align:center; color:black;">Please give a valid weight</span>`;
+}
   else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
 
